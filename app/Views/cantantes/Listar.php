@@ -206,6 +206,10 @@
                         title: 'Cantante actualizado con exito'
                     })
                     llenarTabla()
+                    const tabla = document.getElementById('infoCantantes')
+                    while (tabla.firstChild) {
+                        tabla.removeChild(tabla.firstChild)
+                    }
                 }
             }).catch(error => {
                 console.log(error)
